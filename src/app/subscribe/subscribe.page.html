@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>subscribe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #myform="ngForm">
+    <div class="ion-text-center">
+      <ion-item > <h1>welcome</h1> </ion-item>
+      <ion-item>
+      <ion-label position="floating">taper nom ici </ion-label>
+      <ion-input [(ngModel)]="patient.nom" required  name  ="nom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">taper login ici </ion-label>
+      <ion-input [(ngModel)]="patient.login" required  name  ="login"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">taper mot de passe ici</ion-label>
+      <ion-input [(ngModel)]="patient.mdp" required name  ="mdp" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">taper tel ici </ion-label>
+      <ion-input pattern="[0-9+ ]{8,16}" [(ngModel)]="patient.tel" required name ="tel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">taper adresse ici </ion-label>
+      <ion-input [(ngModel)]="patient.adresse" required name ="adresse"></ion-input>
+    </ion-item>
+  <div><ion-button [disabled]="myform.invalid" expand="block">s'inscrire</ion-button> </div>
+  <a href="auth"> deja membre ? </a>
+  </div>
+  </form >
+</ion-content>
